@@ -1,4 +1,4 @@
-# Starting point
+# ublue-phoenix
 
 [![build-ublue](https://github.com/rilicthefox/ublue-phoenix/actions/workflows/build.yml/badge.svg)](https://github.com/rilicthefox/ublue-phoenix/actions/workflows/build.yml)
 
