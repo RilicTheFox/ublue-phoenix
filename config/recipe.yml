@@ -23,7 +23,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/repo/fedora-%OS_VERSION%/kylegospo-gnome-vrr-fedora-%OS_VERSION%.repo
     install:
       - podman-remote
       - tailscale
@@ -36,9 +35,6 @@ modules:
       - zenity
       - cryfs
       - java-17-openjdk # To run the odd java application here and there
-      - adw-gtk3-theme
-      - qt5ct
-      - ckb-next
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
