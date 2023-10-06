@@ -35,6 +35,7 @@ modules:
       - zenity
       - cryfs
       - java-17-openjdk # To run the odd java application here and there
+      - adw-gtk3-theme
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
