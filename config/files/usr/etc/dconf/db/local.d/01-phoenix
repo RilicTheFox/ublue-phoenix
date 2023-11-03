@@ -1,0 +1,18 @@
+[org/gtk/gtk4/settings/file-chooser]
+sort-directories-first=true
+
+[org/gtk/settings/file-chooser]
+sort-directories-first=true
+
+[org/gnome/desktop/interface]
+gtk-theme='adw-gtk3'
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='flat'
+
+[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=true
+
+# Keep this last, for Gnome VRR script to work. Originally by fiftydinar
+[org/gnome/mutter]
+check-alive-timeout=uint32 20000
