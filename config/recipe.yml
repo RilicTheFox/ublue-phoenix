@@ -49,7 +49,6 @@ modules:
                   # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
-      - gnome-vrr
       # - ublue-update # https://github.com/ublue-os/ublue-update
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
@@ -65,11 +64,6 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-  
-  - type: akmods
-    install:
-      - v4l2loopback
-      - winesync
   
   # VRR
   - type: script
