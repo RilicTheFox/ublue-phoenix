@@ -36,9 +36,6 @@ modules:
       - adw-gtk3-theme
       - qt5ct
       - ckb-next
-    remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
                 #  will be installed and set up
