@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-phoenix
+name: ublue-phoenix-plasma
 # description will be included in the image's metadata
 description: "Ublue, but for my desktop Phoenix :3c"
 
