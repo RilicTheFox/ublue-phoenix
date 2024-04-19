@@ -27,7 +27,7 @@ modules:
       - podman-remote
       - tailscale
       - nextcloud-client
-      - nextcloud-dolphin
+      - nextcloud-client-dolphin
       - zenity
       - cryfs
       - java-17-openjdk # To run the odd java application here and there
