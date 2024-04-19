@@ -1,0 +1,45 @@
+# image will be published to ghcr.io/<user>/<name>
+name: ublue-phoenix
+# description will be included in the image's metadata
+description: "Ublue, but for my desktop Phoenix :3c"
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite-nvidia
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - usr: /usr # copy static configurations
+                  #
+                  # copies config/files/usr into your image's /usr
+                  #
+                  # configuration you wish to end up in /etc/ on the booted system
+                  # should be added into /usr/etc/ as that is the proper "distro"
+                  # config directory on ostree. Read more in the files module's README
+
+  - type: rpm-ostree
+    repos:
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    install:
+      - podman-remote
+      - tailscale
+      - nextcloud-client
+      - nextcloud-dolphin
+      - zenity
+      - cryfs
+      - java-17-openjdk # To run the odd java application here and there
+      - qt5ct
+      - ckb-next
+      - borgbackup
+
+
+  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
+                #  will be installed and set up
+    custom-flatpaks: # this section is optional
+      # - Celluloid: io.github.celluloid_player.Celluloid
+      # - Krita: org.kde.krita
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
