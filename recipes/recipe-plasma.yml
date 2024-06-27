@@ -29,7 +29,6 @@ modules:
       - nextcloud-client
       - zenity
       - cryfs
-      - ckb-next
       - borgbackup
       - merkuro
       - kdepim-runtime
